@@ -152,16 +152,27 @@ function redondearHaciaArriba(num) {
 }
 
 function numeroRandom() {
-  //Generar un número al azar entre 0 y 1 y devolverlo
-  //Pista: investigá qué hace el método Math.random()
+    //Generar un número al azar entre 0 y 1 y devolverlo
+    //Pista: investigá qué hace el método Math.random()
+
+    return Math.random();
 }
 
 function esPositivo(numero) {
-  //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
-  //Si el número es positivo, devolver ---> "Es positivo"
-  //Si el número es negativo, devolver ---> "Es negativo"
-  //Si el número es 0, devuelve false
+    //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
+    //Si el número es positivo, devolver ---> "Es positivo"
+    //Si el número es negativo, devolver ---> "Es negativo"
+    //Si el número es 0, devuelve false
+    if (numero === 0) {
+        return false;
+    } else if (numero > 0) {
+        return 'Es positivo';
+    } else {
+        return 'Es negativo';
+    }
 }
+
+
 
 function agregarSimboloExclamacion(str) {
     // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
@@ -191,32 +202,42 @@ function obtenerAreaRectangulo(alto, ancho) {
 }
 
 
-function retornarPerimetro(lado){
-  //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
-  //Escribe tu código aquí
+function retornarPerimetro(lado) {
+    //Escibe una función a la cual reciba el valor del lado de un cuadrado y retorne su perímetro.
+    //Escribe tu código aquí
+    return lado * 4;
 }
 
 
-function areaDelTriangulo(base, altura){
-  //Desarrolle una función que calcule el área de un triángulo.
-  //Escribe tu código aquí
-
+function areaDelTriangulo(base, altura) {
+    //Desarrolle una función que calcule el área de un triángulo.
+    //Escribe tu código aquí
+    return (base * altura) / 2;
 }
 
 
-function deEuroAdolar(euro){
-  //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que pida al usuario un número de euros y calcule el cambio en dólares.
-  //Escribe tu código aquí
-  
+function deEuroAdolar(euro) {
+    //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que pida al usuario un número de euros y calcule el cambio en dólares.
+    //Escribe tu código aquí
+    return euro * 1.2;
 }
 
 
-function esVocal(letra){
-  //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
-  //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
-  //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
-  //Escribe tu código aquí
+function esVocal(letra) {
+    //Escribe una función que reciba una letra y, si es una vocal, muestre el mensaje “Es vocal”. 
+    //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
+    //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
+    //Escribe tu código aquí
+    if (letra.length > 1) {
+
+        return 'Dato incorrecto';
+    }
+
+    if (letra === 'a' || letra === 'e' || letra === 'i' || letra === 'o' || letra === 'u') {
+        return 'Es vocal';
+    }
 }
+
 
 
 
@@ -224,42 +245,6 @@ function esVocal(letra){
 // --------------------------------
 
 module.exports = {
-<<<<<<< HEAD
-  nuevaString,
-  nuevoNum,
-  nuevoBool,
-  nuevaResta,
-  nuevaMultiplicacion,
-  nuevoModulo,
-  devolverString,
-  tienenMismaLongitud,
-  sonIguales,
-  menosQueNoventa,
-  mayorQueCincuenta,
-  suma,
-  resta,
-  divide,
-  multiplica,
-  obtenerResto,
-  esPar,
-  esImpar,
-  elevarAlCuadrado,
-  elevarAlCubo,
-  elevar,
-  redondearNumero,
-  redondearHaciaArriba,
-  numeroRandom,
-  esPositivo,
-  agregarSimboloExclamacion,
-  combinarNombres,
-  obtenerSaludo,
-  obtenerAreaRectangulo,
-  retornarPerimetro,
-  areaDelTriangulo,
-  deEuroAdolar,
-  esVocal,
-};
-=======
     nuevaString,
     nuevoNum,
     nuevoBool,
@@ -283,9 +268,14 @@ module.exports = {
     elevar,
     redondearNumero,
     redondearHaciaArriba,
+    numeroRandom,
+    esPositivo,
     agregarSimboloExclamacion,
     combinarNombres,
     obtenerSaludo,
     obtenerAreaRectangulo,
+    retornarPerimetro,
+    areaDelTriangulo,
+    deEuroAdolar,
+    esVocal,
 };
->>>>>>> 5f2bacd (avanzando con el homework1)
